@@ -1,0 +1,19 @@
+<div *ngIf="listcar.length > 0; else nothing">
+  <div class="cars" *ngFor="let car of listcar">
+    <div class="car">
+      <div class="car_img">
+        <img [src]="car.image" alt="" />
+      </div>
+      <div class="car_infor">
+        <div class="car_infor_title">
+          <h5>{{ car.name }}</h5>
+          <small>{{ car.description }}</small>
+        </div>
+        <div class="car_infor_price">
+          <p>{{ car.price }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #nothing>No car here</ng-template>

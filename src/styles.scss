@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+/* Application-wide Styles */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #ca3438;
+  --heading-color: #333;
+  --body-color: #666;
+  --gray-color: #eee;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #fafafa;
+  font-size: 14px;
+  font-family: "Oswald", sans-serif;
+  margin: 2rem;
+  color: var(--body-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+label {
+  color: var(--heading-color);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3rem;
+  border-left: 8px solid var(--primary-color);
+  padding-left: 16px;
+  margin-bottom: 16px;
+}
+
+h4 {
+  margin-bottom: 1em;
+}
+
+button {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--gray-color);
+  font-size: 1rem;
+  padding: 12px 16px;
+  margin-right: 8px;
+  text-transform: uppercase;
+}
+
+button:disabled {
+  background-color: var(--gray-color);
+  color: var(--heading-color);
+}
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0.5em 0;
+  font-family: "Oswald", sans-serif;
+}
+
+label {
+  margin-bottom: 1rem;
+}

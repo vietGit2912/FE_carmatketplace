@@ -1,0 +1,9 @@
+<app-card>
+  <div *ngIf="listcar; else tmp">
+    <div class="title">
+      <h4>LIST CAR</h4>
+    </div>
+    <app-listcar [listcar]="listcar"></app-listcar>
+  </div>
+  <ng-template #tmp>NOthing here</ng-template>
+</app-card>

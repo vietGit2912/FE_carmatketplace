@@ -1,0 +1,20 @@
+<app-card
+  ><form [formGroup]="brandForm" (ngSubmit)="onSubmit()">
+    <label for="brand-name">Name: </label>
+    <input id="brand-name" type="text" formControlName="name" />
+    <label for="brand-logo">Logo: </label>
+    <input id="brand-logo" type="text" formControlName="logo" />
+    <label for="brand-description">Description: </label>
+    <textarea
+      id="brand-description"
+      formControlName="description"
+      rows="5"
+      cols="48"
+    ></textarea>
+    <div class="brand-action">
+      <button type="submit" [disabled]="!brandForm.valid">
+        <ng-content></ng-content>
+      </button>
+    </div>
+  </form>
+</app-card>

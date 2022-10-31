@@ -1,0 +1,17 @@
+<div *ngIf="brand" class="brand-detail">
+  <div class="brand-action">
+    <button (click)="goBack()">Back</button>
+    <button (click)="deleteBrand(brand)">Delete</button>
+  </div>
+  <app-brand-information [brand]="brand"></app-brand-information>
+  <app-brand-editor [brand]="brand" [typeOfEditor]="'UPDATE'">
+    UPDATE
+  </app-brand-editor>
+  <div class="brand-card">
+    <app-search (outoutSearchTerm)="getSearchTerm($event)"></app-search>
+    <app-brand-car
+      [brandName]="brand.name"
+      [searchText]="searchTerm"
+    ></app-brand-car>
+  </div>
+</div>

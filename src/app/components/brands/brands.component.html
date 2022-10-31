@@ -1,0 +1,12 @@
+<div class="container">
+  <app-card>
+    <app-search (outoutSearchTerm)="getSearchTerm($event)"></app-search>
+    <app-brand-list
+      [brands]="brands"
+      [searchText]="searchTerm"
+    ></app-brand-list>
+  </app-card>
+  <app-card>
+    <app-brand-editor [typeOfEditor]="'ADD'"> Add Brand </app-brand-editor>
+  </app-card>
+</div>
